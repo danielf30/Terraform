@@ -34,7 +34,7 @@ data "aws_iam_policy" "s3_policy" {
 
 resource "aws_iam_policy" "group_policy" {
   count = var.create_policy ? 1 : 0
-  name = "nequi-${var.central_name}-group-policy-s3"
+  name = "dominio-${var.central_name}-group-policy-s3"
   policy = jsonencode({
         Version = "2012-10-17"
         Statement = [
