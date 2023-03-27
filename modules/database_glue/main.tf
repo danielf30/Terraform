@@ -5,12 +5,12 @@ provider "aws" {
 }
 
 resource "aws_glue_catalog_database" "my_database" {
-  name = "nequi-${var.central_name}-data-base-catalog"
+  name = "dominio-${var.central_name}-data-base-catalog"
   description = "Mi base de datos de prueba"
 }
 
 resource "aws_glue_catalog_table" "my_table" {
-  name = "nequi-${var.central_name}-table-catalog"
+  name = "dominio-${var.central_name}-table-catalog"
   database_name = aws_glue_catalog_database.my_database.name
   table_type = "EXTERNAL_TABLE"
   parameters = {
